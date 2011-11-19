@@ -11,6 +11,8 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 # Component requirements
 gem 'sass'
 gem 'haml'
+gem 'activerecord', :require => "active_record"
+gem 'sqlite3'
 
 # Test requirements
 gem 'mocha', :group => "test"
