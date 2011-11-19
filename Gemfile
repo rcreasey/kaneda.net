@@ -12,3 +12,5 @@ gem 'shoulda', :group => "test"
 gem 'rack-test', :require => "rack/test", :group => "test"
 
 gem 'padrino', '0.10.5'
+# Heroku
+gem 'pg', :group => :production
