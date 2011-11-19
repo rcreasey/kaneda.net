@@ -9,6 +9,6 @@ module ScssInitializer
     Sass::Plugin.options[:css_location] = Padrino.root("public/stylesheets")
     Sass::Plugin.options[:never_update] = true if Padrino.env == :production
 
-app.use Sass::Plugin::Rack
+    app.use Sass::Plugin::Rack
   end
 end
