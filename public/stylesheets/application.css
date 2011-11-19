@@ -1,7 +1,7 @@
 body {
-  padding:10px;
+  padding: 2px;
   background-color: #000000;
-  color: #14FC03;
+  color: #fff;
 }
 
 div {
@@ -10,18 +10,18 @@ div {
 }
 
 a {
-  color:#FFF;
+  color: #FFF;
 }
 
 a:visited {
-  color:#CCC;
+  color: #CCC;
 }
 
 span.symlink {
-  color:#F00;
+  color: #F00;
 }
 
 #cursor { 
-  font-weight:normal; 
-  background-color:#14FC03;
+  font-weight: normal; 
+  background-color: #fff;
 }
