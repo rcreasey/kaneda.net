@@ -9,6 +9,12 @@ div {
 	font-size: 10pt;
 }
 
+pre {
+	font-family: Monaco !important;
+	font-size: 10pt;
+	margin-top: 0 !important;
+}
+
 a {
   color: #FFF;
 }

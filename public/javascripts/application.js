@@ -13,9 +13,19 @@ var blink_closure = (function () {
   };
 })();
 
+function six(){
+  $("#6").show();
+  setInterval(blink_closure, 1000);
+}
+
+function five(){
+  $("#5").show().jTypeWriter({duration:0.5});;
+  setTimeout(six, 1500);
+}
+
 function four(){
   $("#4").show();
-  setInterval(blink_closure, 1000);
+  setTimeout(five, 1500);
 }
 
 function three(){
