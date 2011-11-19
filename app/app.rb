@@ -37,14 +37,9 @@ class KanedaNet < Padrino::Application
   # layout  :my_layout            # Layout can be in views/layouts/foo.ext or views/foo.ext (default :application)
   #
 
-  ##
-  # You can configure for a specified environment like:
-  #
-  #   configure :development do
-  #     set :foo, :bar
-  #     disable :asset_stamp # no asset timestamping for dev
-  #   end
-  #
+  get :index, :provides => [:html] do
+    render 'prompt/index'
+  end
 
   ##
   # You can manage errors like:

@@ -2,9 +2,7 @@
 %html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
   %head
     %title kaneda.net
-    = stylesheet_link_tag 'bootstrap', 'application'
-    = javascript_include_tag 'application'
-    = yield_content :include
+    = stylesheet_link_tag 'application'
+    = javascript_include_tag 'jquery', 'jtypewriter', 'application'
     
-  %body
-  	ohai2u
+  %body= yield
