@@ -20,17 +20,17 @@ function six(){
 
 function five(){
   $("#5").show().jTypeWriter({duration:0.5});;
-  setTimeout(six, 1500);
+  setTimeout(six, 1000);
 }
 
 function four(){
   $("#4").show();
-  setTimeout(five, 1500);
+  setTimeout(five, 1000);
 }
 
 function three(){
   $("#3").show();
-  setTimeout(four, 1500);
+  setTimeout(four, 1000);
 }
 
 function two(){
