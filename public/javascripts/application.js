@@ -1,3 +1,4 @@
+// blatantly stolen from Steve Klabnik 
 var blink_closure = (function () {
   var state = "on";
   return function() {
