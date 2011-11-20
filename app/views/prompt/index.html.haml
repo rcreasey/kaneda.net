@@ -2,10 +2,10 @@
   %span localhost %
   %span#2{:style => 'display: none'} ssh ryan@kaneda.net
   %div#3{:style => 'display: none'} ryan@kaneda.net's password:
-%div#4{:style => 'display: none'}
+%div.prompt#4{:style => 'display: none'}
   kaneda.net % 
   %span#5{:style => 'display: none'} tree -d ~
-%div#6{:style => 'display: none'}
-  %pre= partial 'prompt/tree'
-  %span kaneda.net % 
+%pre#6{:style => 'display: none'}= partial 'prompt/tree'
+%div.prompt#7{:style => 'display: none'}
+  kaneda.net % 
   %span#cursor &nbsp;

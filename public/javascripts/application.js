@@ -13,9 +13,14 @@ var blink_closure = (function () {
   };
 })();
 
+function seven(){
+  $("#7").show();
+  setInterval(blink_closure, 1000);
+}
+
 function six(){
   $("#6").show();
-  setInterval(blink_closure, 1000);
+  setTimeout(seven, 1000);
 }
 
 function five(){

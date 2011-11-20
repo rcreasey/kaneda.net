@@ -1,6 +1,6 @@
 body {
   padding: 2px;
-  background-color: #000000;
+  background-color: #000;
   color: #fff;
 }
 
@@ -27,7 +27,12 @@ span.symlink {
   color: #F00;
 }
 
+.prompt {
+	background-color: #ccc;
+  color: #000;
+}
+
 #cursor { 
   font-weight: normal; 
-  background-color: #fff;
+  background-color: #000;
 }
