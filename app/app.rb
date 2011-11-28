@@ -35,4 +35,8 @@ class KanedaNet < Padrino::Application
   get :index, :provides => [:html] do
     render 'prompt/index'
   end
+  
+  get :about, :provides => [:html] do
+    render 'prompt/about'
+  end
 end
