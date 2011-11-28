@@ -14,8 +14,8 @@ gem 'sqlite3'
 gem 'thin'
 
 gem 'padrino', '0.10.5'
-gem 'padrino-rpm'
-gem 'newrelic_rpm'
+gem 'padrino-rpm', :git => 'https://github.com/Asquera/padrino-rpm.git'
+gem 'newrelic_rpm', '3.1.0'
 
 # Heroku
 gem 'pg', :group => :production

@@ -16,7 +16,7 @@ I'm a graduate of [UC Irvine](http://www.uci.edu) majoring in Information and Co
 
 I'm employed as a Senior Reliability Engineer II for the [battle.net](http://battle.net) team at [Blizzard Entertainment](http://blizzard.com). I'm not able to disclose much about my current role, but it's a pretty awesome gig.  You can check out [my LinkedIn profile](http://www.linkedin.com/in/ryancreasey), if you're really that interested in my current or previous employment.
 
-I'm married to my beautiful wife, Michelle and together we have a miniature pinscher, Mr. T.
+I'm married to my beautiful wife, Michelle, and together we have a miniature pinscher, Mr. T.
 
 ## The Site
 
