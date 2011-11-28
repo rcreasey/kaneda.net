@@ -8,11 +8,11 @@ class KanedaNet < Padrino::Application
   enable :sessions
   enable :caching
   
-  set :cache, Padrino::Cache::Store::Memcache.new( ::Dalli::Client.new )
-  
   layout :application
   
   configure :production do
+    set :cache, Padrino::Cache::Store::Memcache.new( ::Dalli::Client.new )
+
     ENV['APP_ROOT'] ||= File.dirname(__FILE__)
     $:.unshift "#{ENV['APP_ROOT']}/vendor/plugins/newrelic_rpm/lib"
     require 'newrelic_rpm'
@@ -26,7 +26,11 @@ class KanedaNet < Padrino::Application
     render 'prompt/index'
   end
   
-  get :about, :provides => [:html] do
+  get :about, :provides => [:html], :cache => true do
     render 'prompt/about'
+  end
+  
+  get '/files/ryan.creasey.pdf' do
+    redirect 'http://www.linkedin.com/in/ryancreasey'
   end
 end
