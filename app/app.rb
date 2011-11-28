@@ -12,12 +12,6 @@ class KanedaNet < Padrino::Application
   
   layout :application
   
-  configure :production do
-    ENV['APP_ROOT'] ||= File.dirname(__FILE__)
-    $:.unshift "#{ENV['APP_ROOT']}/vendor/plugins/newrelic_rpm/lib"
-    require 'newrelic_rpm'
-  end
-  
   error 404, :provides => [:html] do
     render 'errors/404'
   end
