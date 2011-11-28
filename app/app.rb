@@ -9,6 +9,10 @@ class KanedaNet < Padrino::Application
   
   layout :application
   
+  configure :production do
+    require 'newrelic_rpm'
+  end
+  
   ##
   # Caching support
   #
