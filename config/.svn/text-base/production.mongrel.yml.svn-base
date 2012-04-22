@@ -1,0 +1,7 @@
+--- 
+address: 127.0.0.1
+port: 13000
+environment: production
+pid_file: log/mongrel.pid
+servers: 3
+cwd: /www/kaneda.net/current

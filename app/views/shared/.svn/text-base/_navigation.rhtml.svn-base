@@ -1,0 +1,9 @@
+<ul id="tabs">
+<%= content_tag('li', link_to('Posts', {:controller => 'posts'}, {:title => 'Stay up to date.', :class => 'tab posts'}), :class => ('selected' if @current_tab == :posts)) %>
+<%= content_tag('li', link_to('Comments', {:controller => 'comments'}, {:title => 'Keep a finger on the feedback pulse.', :class => 'tab comments'}), :class => ('selected' if @current_tab == :comments)) %>
+<%= content_tag('li', link_to('People', {:controller => 'people'}, {:title => 'Hang with the family.', :class => 'tab people'}), :class => ('selected' if @current_tab == :people)) %>
+
+<% if logged_in? %>
+<%= content_tag('li', link_to('Post!', post_url, {:title => 'Share your thoughts.', :class => 'tab post'}), :class => ('selected' if @current_tab == :posts_post)) %>
+<% end %>
+</ul>

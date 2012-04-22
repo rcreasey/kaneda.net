@@ -1,0 +1,11 @@
+<h2><%= link_to_person_icon current_person %> It's you!</h2>
+<p>We &lt;3 you.</p>
+
+<p>You can:</p>
+
+<ul>
+<li><%= link_to('Make a post', post_url, {:title => 'Make yourself heard.', :class => 'action post'}) %></li>
+<li><%= link_to('Edit profile', my_profile_url, {:title => 'Change your public profile.', :class => 'action profile edit'}) %></li>
+<li><%= link_to('Edit icon', my_icon_url, {:title => 'Change your little image.', :class => 'action icon edit'}) %></li>
+<li><%= link_to 'Log Out', logout_url, {:title => 'Log out of your account.', :class => 'action logout'} %></li>
+</ul>

@@ -1,0 +1,16 @@
+<% flash[:notice] = 'Sorry, but I couldn\'t create your account! Check the form for details.' if @person.errors.length > 0 %>
+
+<h2>Sign up</h2>
+<% if logged_in? %>
+	<p>But.. you already did! Though I do like your enthusiasm.</p>
+<% else %>
+	<% form_for :person do |f| -%>
+	<p><label for="person_account_name">What should your <strong>account name</strong> be?</label> <%= show_inline_errors_for(@person, 'account_name') %><br/><span>It needs to be 3-15 lowercase letters or numbers, and <em>you can't change it later</em>, so pick carefully!</span><br /><%= f.text_field :account_name %></p>
+	<p><label for="person_email_address">What's your <strong>email address</strong>?</label> <%= show_inline_errors_for(@person, 'email_address') %><br/><span>We'll use this to send out your confirmation email.</span><br /><%= f.text_field :email_address %></p>
+	<p><label for="person_password">What <strong>password</strong> do you want to use?</label> <%= show_inline_errors_for(@person, 'password') %><br/><span>It needs to be 4-40 letters or numbers.</span><br /><%= f.password_field :password %></p>
+	<p><label for="person_password_confirmation">Can you confirm your <strong>password</strong> for me?</label> <%= show_inline_errors_for(@person, 'password_confirmation') %><br/><span>We just want to be sure.</span><br /><%= f.password_field :password_confirmation %></p>
+	<p><label for="person_profile">Want to tell us a little about yourself? (It's optional!)</label><br/><span>You can say as much or as little as you like.</span><br /><%= f.text_area :profile, :size => '70x5' %></p>
+	<p><%= f.check_box :accepts_tos %> <label for="person_accepts_tos">By signing up, you agree to our <%= link_to 'Terms of Service', about_tos_url, :title => 'View the terms of service. Ick.', :target => '_tos' %></label><%= show_inline_errors_for(@person, 'accepts_tos') %>.</p>
+	<p><%= submit_tag 'Sign up' %></p>
+	<% end -%>
+<% end %>

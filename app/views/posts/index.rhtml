@@ -1,0 +1,19 @@
+<% unless @posts.blank? %>
+	<%= content_tag 'h2', @title %>
+	
+	<% for post in @posts %>
+		<div id="post-<%= post.id %>" class="post">
+		<h3><%= link_to_person_icon(post.person) + link_to_post(post) + " (" + link_to_comments_for(post, url_for_post(post), true) + ")" %></h3>
+		<p class="summary"><%= summary_for_post post %></p>
+		<p class="tags"><%= tags_for post %></p>
+		<% should_truncate = post.contents.length > 1000 %>
+		<%= markup post.contents, :should_truncate => should_truncate %>
+		<%= content_tag('p', 'This post is <strong>big</strong>! ' + link_to_post(post, "Read the whole thing") + '.', :class => 'more post') if should_truncate %>
+		</div>
+	<% end %>
+	
+	<%= show_page_boy @pages, 'post' %>
+<% else %>
+	<h2>There are no posts here!</h2>
+	<p>Sorry about that.</p>
+<% end %>

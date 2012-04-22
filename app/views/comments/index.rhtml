@@ -1,0 +1,13 @@
+<%= content_tag 'h2', @title %>
+
+<% unless @comments.blank? %>
+	<% @comments.each do |comment| %>
+		<div id="comment-<%= comment.id %>" class="post">
+		<h3><%= link_to_person_icon(comment.person) %> Re: <%= link_to_comment comment, "#{sanitize(comment.commentable.title)}" %></h3>
+		<p class="summary"><%= summary_for_comment comment %></p>
+		<%= markup comment.contents %>
+		</div>
+	<% end %>
+	
+	<%= show_page_boy @pages, 'comment' %>
+<% end %>

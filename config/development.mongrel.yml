@@ -1,0 +1,7 @@
+--- 
+address: 127.0.0.1
+port: 8001
+environment: development
+pid_file: log/mongrel.pid
+servers: 1
+cwd: /www/dev.kaneda.net

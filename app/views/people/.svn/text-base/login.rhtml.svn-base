@@ -1,0 +1,12 @@
+<% if logged_in? %>
+	<h2>Again?</h2>
+	<%= current_person.name %>, you're <em>already</em> logged in! Did you want to <%= link_to "log out?", logout_url, :title => "Log out of your account." %>
+<% else %>
+	<h2>Welcome home</h2>
+	<%= form_tag '/login' %>
+	<p><label for="account_name">What's your <strong>account name</strong>?</label><br /><span>You remember this, right?</span><br/><%= text_field_tag 'account_name' %></p>
+	<p><label for="password">And what's your <strong>password</strong>?</label><br /><span>Can't remember? Uh, eventually you'll be able to get it back. Yeah.</span><br/><%= password_field_tag 'password' %></p>
+	<p><%= check_box_tag 'remember_me' %> <label for="remember_me">Log me in automatically</label></p>
+	<p><%= submit_tag "Log in" %></p>
+	</form>
+<% end %>

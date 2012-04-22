@@ -1,0 +1,8 @@
+<% flash[:notice] = 'Sorry, but I couldn\'t create your post! Check the form for details.' if @post.errors.length > 0 %>
+
+<h2>Make a post</h2>
+<% form_for :post, @post, :url => { :action => 'create' } do |f| -%>
+<p><label for="post_title">What's the <strong>title</strong> of your post?</label> <%= show_inline_errors_for(@post, 'title') %><br/><span>It needs to be 3-60 characters.<br /></span></br ><%= f.text_field :title %></p>
+<%= render :partial => 'form', :locals => { :f => f } %>
+<p><%= f.hidden_field :person_id, :value => [current_person.id] %><%= submit_tag 'Add your post' %></p>
+<% end -%>

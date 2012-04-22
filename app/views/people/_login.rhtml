@@ -1,0 +1,11 @@
+<h2>Hello, friend!</h2>
+<p>Welcome to kaneda.net.</p>
+
+<p>Are you new to the site? <%= link_to 'Sign up', signup_url, {:title => 'Come and join the family.', :class => 'signup'} %> for a <strong>free</strong> account!</p>
+<p>Otherwise, log on in:</p>
+<%= form_tag '/login' %>
+<p><label for="account_name">Account name</label><br/><%= text_field_tag 'account_name' %></p>
+<p><label for="password">Password</label><br/><%= password_field_tag 'password' %></p>
+<p><%= check_box_tag 'remember_me' %> <label for="remember_me">Log me in automatically</label></p>
+<p><%= submit_tag "Log in" %></p>
+</form>

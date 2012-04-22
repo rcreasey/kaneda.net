@@ -1,0 +1,26 @@
+xml.instruct!
+xml.feed 'xml:lang' => 'en-us', 'xmlns' => 'http://www.w3.org/2005/Atom' do
+    xml.id          tag_uri_for_feed
+    xml.title       'kaneda.net: ' + @title
+    xml.link        :href => 'http://kaneda.net' + request.request_uri, :type => 'text/html', :rel => 'alternate'
+    xml.link        :href => 'http://feed.kaneda.net' + request.request_uri, :type => 'application/atom+xml', :rel => 'self'
+    xml.updated     @people.first ? @people.first.created_on.xmlschema : Time.now.utc.xmlschema
+    
+    for person in @people
+        xml.entry do
+            xml.id              tag_uri_for_record person, url_for_person(person)
+            xml.title           person.name
+            xml.link            :href => 'http://kaneda.net' + url_for_person(person), :type => 'text/html', :rel => 'alternate'
+            xml.published       person.created_on.xmlschema
+            xml.updated         person.updated_on.xmlschema
+            xml.content         markup(person.profile), :type => 'html'
+            xml.author          { xml.name person.name }
+            
+            if person.tags.length > 0
+                for tag in person.tags
+                    xml.category :scheme => 'http://kaneda.net' + url_for_tag(tag, 'Person'), :term => tag.name
+                end
+            end
+        end
+    end
+end

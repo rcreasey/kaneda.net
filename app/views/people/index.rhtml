@@ -1,0 +1,10 @@
+<%= content_tag 'h2', @title %>
+<% unless @people.blank? %>
+	<ul id="people">
+	<% @people.each do |person| %>
+	<li><%= link_to_person_icon(person) %> <%= link_to_person(person) %><br /><span class="summary">Part of the family for <%= time_ago_in_words(person.created_on) %>.</span></li>
+	<% end %>
+	</ul>
+	
+	<%= show_page_boy @pages, 'person' %>
+<% end %>

@@ -1,0 +1,9 @@
+Hey, <%= @person.account_name %>!
+
+Thanks for signing up with kaneda.net. To activate your account and join in on the fun, simply visit:
+
+	<%= @url %>
+	
+Hear that? The robots have already begun.
+
+r.

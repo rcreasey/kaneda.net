@@ -1,0 +1,64 @@
+9
+
+dir
+940
+svn://svn.evilcode.net/sites/kaneda.net/trunk/public/javascripts/code
+svn://svn.evilcode.net/sites
+
+
+
+2007-10-19T02:46:05.108694Z
+940
+ryan
+
+
+svn:special svn:externals svn:needs-lock
+
+html.js
+file
+
+
+
+
+2007-10-19T02:23:24.000000Z
+c3fe5679b3512589a24fc60b4bbb30d1
+2007-10-19T02:46:05.108694Z
+940
+ryan
+
+javascript.js
+file
+
+
+
+
+2007-10-19T02:23:24.000000Z
+ae9cb85758c63c07ef03d1c6a18499cd
+2007-10-19T02:46:05.108694Z
+940
+ryan
+
+css.js
+file
+
+
+
+
+2007-10-19T02:23:24.000000Z
+d223b191b18f06c9a3164f1e5231dbe1
+2007-10-19T02:46:05.108694Z
+940
+ryan
+
+ruby.js
+file
+
+
+
+
+2007-10-19T02:23:24.000000Z
+4b561bd1d5918ae3b21bb20c4a0e6dfa
+2007-10-19T02:46:05.108694Z
+940
+ryan
+

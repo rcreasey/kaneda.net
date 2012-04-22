@@ -1,0 +1,31 @@
+<% unless @post.nil? %>
+	<h2>The post</h2>	
+	<h3><%= link_to_person_icon(@post.person) + ' ' + sanitize(@post.title) %></h3>
+	<p class="summary"><%= summary_for_post @post %></p>
+	<p class="tags"><%= tags_for @post %></p>
+	<%= markup @post.contents %>
+	
+	<h4 id="comments"><%= comments_string_for @post %></h4>
+	
+	<% if @post.comments.length > 0 %>
+		<% @post.comments.each do |comment| %>
+			<div id="comment-<%= comment.id %>" class="comment">
+			<h5><%= link_to_person_icon(comment.person, '30x30') %> <%= link_to_person(comment.person) %></h5>
+			<p class="summary"><%= summary_for_comment(comment, false) %> <%= link_to_comment(comment, '#') %></p>
+			<%= markup comment.contents %>
+			</div>
+		<% end %>
+	<% end %>	
+
+	<% if logged_in? %>
+		<% form_for :comment, @comment, :url => url_for_post(@post) + '/comment', :html => {:id => 'comment'} do |f| -%>
+		<p><label for="comment_contents">Want to leave a <strong>comment</strong>?</label><br/><span>This field supports <%= link_to 'Markdown', 'http://daringfireball.net/projects/markdown/basics', :title => 'The basics of the Markdown markup.' %>.</span><br /><%= f.text_area :contents, :size => '70x10' %></p>
+		<p><%= submit_tag 'Add your comment' %></p>
+		<% end -%>
+	<% else %>
+		<p>You need to be logged in to leave a comment.</p>
+	<% end %>
+<% else %>
+	<h2>There's no post here!</h2>
+	<p>Sorry about that.</p>
+<% end %>

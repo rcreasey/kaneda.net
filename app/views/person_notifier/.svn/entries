@@ -1,0 +1,52 @@
+9
+
+dir
+936
+svn://svn.evilcode.net/sites/kaneda.net/trunk/app/views/person_notifier
+svn://svn.evilcode.net/sites
+
+
+
+2007-10-18T22:42:44.531670Z
+925
+ryan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b1206cc1-2106-0410-84da-53eeff8bd16c
+
+signup_notification.rhtml
+file
+937
+
+
+
+2007-10-19T00:12:38.000000Z
+a01cd2a43277a948e6df34b0de3ca323
+2007-10-19T00:17:03.171939Z
+937
+ryan
+
+activation.rhtml
+file
+937
+
+
+
+2007-10-19T00:13:28.000000Z
+4152398d83ae12402596707409965be6
+2007-10-19T00:17:03.171939Z
+937
+ryan
+

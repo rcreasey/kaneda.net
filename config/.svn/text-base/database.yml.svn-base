@@ -1,0 +1,24 @@
+login: &login
+  adapter: mysql
+  username: kanedanet
+  password: kanedanet
+
+development:
+  database: kanedanet_dev 
+  host: localhost
+  <<: *login
+    
+staging:
+  database: kanedanet_dev 
+  host: db.kaneda.net
+  <<: *login
+
+test:
+  database: kanedanet_test
+  host: localhost
+  <<: *login
+
+production:
+  database: kanedanet 
+  host: db.kaneda.net
+  <<: *login

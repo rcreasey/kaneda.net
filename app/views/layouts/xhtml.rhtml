@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<title>kaneda.net 5<%= (': ' + @title) if @title %></title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<%= stylesheet_link_tag 'screen', 'code' %>
+<%= javascript_include_tag 'mootools', 'application', 'highlighter', 'code/ruby' %>
+<%= content_tag :script, '', {:src => 'http://stats.kaneda.net/?js', :type => 'text/javascript'} %>
+<link rel="alternate" type="application/atom+xml" title="Atom feed for this page." href="http://feed.kaneda.net<%= request.request_uri %>" />
+</head>
+
+<body>
+
+<div id="header">
+  <div class="airlock">
+    <h1><a href="/">kaneda.net</a></h1>
+    <%= render :partial => 'shared/navigation' %>
+  </div>
+</div>
+<div id="content">
+  <div class="airlock">
+    <% if flash[:notice] %><p id="status"><%= flash[:notice] %></p><% flash[:notice] = nil %><% end %>
+
+    <div id="person">
+    <% if logged_in? %>
+      <p><%= link_to_person current_person, :identify_as_current => false %>! (<%= link_to('Log out', logout_url, {:title => 'End your session.'}) %>)</p>
+      <ul>
+      <%= content_tag('li', link_to('Profile', my_profile_url, {:title => 'Update your profile.'})) %>
+      <%= content_tag('li', link_to('Icon', my_icon_url, {:title => 'Change your user icon.'})) %>
+      </ul>
+    <% else %>
+      <p>Hello! Care to <%= link_to 'sign up', signup_url, {:title => 'Join the family.', :class => 'action signup'} %> or <%= link_to 'log in', login_url, {:title => 'Come on in.', :class => 'action login'} %>?</p>
+    <% end %>
+    </div>
+
+    <%= yield %>
+  </div>
+</div>
+<div id="footer">
+  <div class="airlock">
+    <div class="block first">
+      <h3>About</h3>
+      <p>kaneda.net is the personal site of Ryan Creasey.  There's not a whole lot to see here, other than random technical blatherings and comments about being a nerd.  One can read more <a href="/about/">about</a> what's going on here, if one were so inclined.</p>
+      <p>We got <%= link_to 'terms of service', about_tos_url, :title => 'View kaneda.net\'s terms of service.' %> all up in your <em>grill</em>.  Also, feel free to be nosy and browse our <%= link_to 'stats', 'http://stats.kaneda.net/' %>.  We're proudly hosted by <%= link_to 'infernalhosting', 'http://infernalhosting.net' %>.</p>
+    </div>
+    <div class="block">
+      <h3>Recent Posts</h3>
+      <%= recent_posts_list %>
+    </div>
+    <div id="copyright"><p>&copy; 2008 Ryan Creasey</p></div>
+  </div>
+</div>
+
+</body>
+
+</html>

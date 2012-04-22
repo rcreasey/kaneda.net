@@ -1,0 +1,94 @@
+9
+
+dir
+932
+svn://svn.evilcode.net/sites/kaneda.net/trunk/vendor/plugins/classic_pagination
+svn://svn.evilcode.net/sites
+
+
+
+2007-10-18T22:42:44.531670Z
+925
+ryan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b1206cc1-2106-0410-84da-53eeff8bd16c
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2007-10-18T23:14:19.000000Z
+b14424b71d2f606a775061237c8226f1
+2007-10-18T22:42:44.531670Z
+925
+ryan
+
+init.rb
+file
+
+
+
+
+2007-10-18T23:14:20.000000Z
+181539722e198d92992a94f40310f4fc
+2007-10-18T22:42:44.531670Z
+925
+ryan
+
+lib
+dir
+
+CHANGELOG
+file
+
+
+
+
+2007-10-18T23:14:20.000000Z
+3ef206f381b42341342908fcc0001210
+2007-10-18T22:42:44.531670Z
+925
+ryan
+
+install.rb
+file
+
+
+
+
+2007-10-18T23:14:20.000000Z
+1c88d6bc27aa809cd6ef26543c18b1e6
+2007-10-18T22:42:44.531670Z
+925
+ryan
+
+README
+file
+
+
+
+
+2007-10-18T23:14:20.000000Z
+f1df690ff1ea0da74f8fe161f50722ad
+2007-10-18T22:42:44.531670Z
+925
+ryan
+

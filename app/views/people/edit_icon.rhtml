@@ -1,0 +1,17 @@
+<% flash[:notice] = 'Sorry, but I couldn\'t update your icon! Check the form for details.' if @person.errors.length > 0 %>
+
+<h2>Edit your icon</h2>
+<p><%= link_to_person_icon @person %> This is your current icon.<br />
+<span class="summary">
+<% if @person.has_icon %>
+Nice. But if you're sick of it, feel free to <%= link_to'<strong>remove it!</strong>', my_icon_delete_url, {:confirm => 'Are you sure you want to remove your current icon?', :title => 'Remove your current icon.'} %>
+<% else %>
+<strong>Oh noes!</strong> It's the boring old default grey box of doom.
+<% end %>
+</span>
+</p>
+	
+<% form_tag my_icon_update_url, :multipart => true do |f| -%>
+<p><label for="icon">Upload an image:</label> <%= file_field_tag 'icon' %> <%= submit_tag "Upload" %></p>
+<p class="summary">You'll want an image around 32x32, and a file less than 80k. We support .jpg, .png and .gif formats.</p>
+<% end -%>

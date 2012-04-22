@@ -1,0 +1,10 @@
+<% flash[:notice] = 'Sorry, but I couldn\'t update your post! Check the form for details.' if @post.errors.length > 0 %>
+
+<h2>Editing your post</h2>
+<h3><%= link_to_post(@post) %></h3>
+<p class="summary">You posted this <%= time_ago_in_words @post.created_on %> ago.</p>
+
+<% form_for :post, @post, :url => { :action => 'update' } do |f| -%>
+<%= render :partial => 'form', :locals => { :f => f } %>
+<%= submit_tag 'Change your post' %></p>
+<% end -%>

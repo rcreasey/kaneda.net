@@ -1,0 +1,22 @@
+xml.instruct!
+xml.feed 'xml:lang' => 'en-us', 'xmlns' => 'http://www.w3.org/2005/Atom' do
+    xml.id          tag_uri_for_feed
+    xml.title       'kaneda.net: ' + @title
+    xml.link        :href => 'http://kaneda.net' + request.request_uri, :type => 'text/html', :rel => 'alternate'
+    xml.link        :href => 'http://feed.kaneda.net' + request.request_uri, :type => 'application/atom+xml', :rel => 'self'
+    xml.updated     @post.created_on.xmlschema
+    
+    if @post.comments.length > 0
+        for comment in @post.comments
+            xml.entry do
+                xml.id              tag_uri_for_record comment, url_for_post(@post) + "#comment-#{comment.id}"
+                xml.title           comment.person.name
+                xml.link            :href => 'http://kaneda.net' + url_for_post(@post) + "#comment-#{comment.id}", :type => 'text/html', :rel => 'alternate'
+                xml.published       comment.created_on.xmlschema
+                xml.updated         comment.updated_on.xmlschema
+                xml.content         markup(comment.contents), :type => 'html'
+                xml.author          { xml.name comment.person.name }
+            end
+        end
+    end
+end

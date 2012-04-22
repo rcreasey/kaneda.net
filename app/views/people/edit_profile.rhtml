@@ -1,0 +1,9 @@
+<% flash[:notice] = 'Sorry, but I couldn\'t update your details! Check the form for details.' if @person.errors.length > 0 %>
+
+<h2>Edit your profile</h2>
+<% form_for :person, @person, :url => my_profile_update_url do |f| -%>
+<p><label for="person_display_name">What's your <strong>display name</strong>?</label> <%= show_inline_errors_for(@person, 'display_name') %><br/><span>It needs to be 1-30 characters.</span><br /><%= f.text_field :display_name %></p>
+<p><label for="person_tag_list">How do you want to <strong>tag</strong> yourself? (It's optional!)</label> <%= show_inline_errors_for(@person, 'tag_list') %><br/><span>You'll want to separate 'em with a space.</span><br /><%= f.text_field :tag_list %></p>
+<p><label for="person_profile">Want to tell us a little about yourself? (It's optional!)</label> <%= show_inline_errors_for(@person, 'profile') %><br/><span>This field supports <%= link_to 'Markdown', 'http://daringfireball.net/projects/markdown/basics', :title => 'The basics of the Markdown markup.' %>.</span><br /><%= f.text_area :profile, :size => '70x20' %></p>
+<p><%= submit_tag "Update your details" %></p>
+<% end -%>

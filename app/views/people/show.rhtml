@@ -1,0 +1,10 @@
+<% unless @person.nil? %>
+	<h2>The person</h2>	
+	<h3><%= icon_image_for_person(@person) %> <%= sanitize @person.name %></h3>
+	<p class="summary">In the family for <%= time_ago_in_words(@person.created_on) %>.
+	<p class="tags"><%= tags_for @person %></p>
+	<%= markup @person.profile %>	
+<% else %>
+	<h2>Who were you after?</h2>
+	<p>There's no one on the site by that name (yet).</p>
+<% end %>
