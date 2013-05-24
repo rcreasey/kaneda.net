@@ -11,7 +11,6 @@ gem 'rake'
 gem 'sass'
 gem 'shoulda', :group => 'test'
 gem 'sinatra-flash', :require => 'sinatra/flash'
-gem 'sqlite3'
 gem 'unicorn'
 
 gem 'padrino', '0.10.5'
