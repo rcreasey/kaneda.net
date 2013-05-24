@@ -1,4 +1,5 @@
-source :rubygems
+source "https://rubygems.org"
+ruby "1.9.2"
 
 gem 'activerecord', :require => 'active_record'
 gem 'dalli'
@@ -11,7 +12,7 @@ gem 'sass'
 gem 'shoulda', :group => 'test'
 gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'sqlite3'
-gem 'thin'
+gem 'unicorn'
 
 gem 'padrino', '0.10.5'
 gem 'padrino-rpm', :git => 'https://github.com/Asquera/padrino-rpm.git'
