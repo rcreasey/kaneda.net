@@ -1,9 +1,4 @@
 .DS_Store
-log/**/*
-tmp/**/*
-bin/*
-vendor/gems/*
-!vendor/gems/cache/
-.sass-cache/*
-.bundle
-.rvmrc
+log/*
+node_modules/*
+npm-debug.log
