@@ -1,0 +1,2 @@
+RACK_ENV=production
+SESSION_SECRET=sekr3t_3at1ng
