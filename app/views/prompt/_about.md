@@ -8,13 +8,13 @@ It has nothing to do with [this movie](http://www.imdb.com/title/tt0094625/), [t
 
 Remember when the intar-web was nothing more than a few bbs tied loosely together and the first time you dialed up your old analog modem? Well, being indecisive and just seeing [Shogun](http://www.imdb.com/title/tt0080274/), I asked a japanese friend of mine for a common japanese name. "I have a brother named 'Kaneda'," he offered. I've been typing 'kaneda' at login prompts ever since.
 
-However, it wasn't until my sophomore year in college that I finally decided to get a webpage, and luckily the domain wasn't squatted (well, if you want to call the $75 domain registration those pirate over at NetSol were charging). As of Feb 2007, kaneda.net is eight years old and has now sprung up into many different aspects.
+However, it wasn't until my sophomore year in college that I finally decided to get a webpage, and luckily the domain wasn't squatted (well, if you want to call the $75 domain registration those pirates over at NetSol were charging). As of Feb 2007, kaneda.net is eight years old and has now sprung up into many different aspects.
 
 ## Ryan C. Creasey
 
 I'm a graduate of [UC Irvine](http://www.uci.edu) majoring in Information and Computer Science, with a specialization in Networks and Distributed Systems.
 
-I'm employed as a Senior Reliability Engineer II for the [battle.net](http://battle.net) team at [Blizzard Entertainment](http://blizzard.com). I'm not able to disclose much about my current role, but it's a pretty awesome gig.  You can check out [my LinkedIn profile](http://www.linkedin.com/in/ryancreasey), if you're really that interested in my current or previous employment.
+I'm employed as a Senior Systems Engineer II for the [battle.net](http://battle.net) team at [Blizzard Entertainment](http://blizzard.com). I'm not able to disclose much about my current role, but it's a pretty awesome gig.  You can check out [my LinkedIn profile](http://www.linkedin.com/in/ryancreasey), if you're really that interested in my current or previous employment.
 
 I'm married to my beautiful wife, Michelle, and together we have a miniature pinscher, Mr. T.
 
