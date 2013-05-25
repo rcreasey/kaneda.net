@@ -1,20 +1,9 @@
-ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "kaneda_net_development.db")
-}
-
-ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "kaneda_net_test.db")
-
-}
-
 postgres = URI.parse(ENV['DATABASE_URL'] || '')
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter  => 'postgresql',
   :encoding => 'utf8',
-  :database => postgres.path[1..-1], 
+  :database => postgres.path[1..-1],
   :username => postgres.user,
   :password => postgres.password,
   :host     => postgres.host

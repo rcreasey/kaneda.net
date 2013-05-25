@@ -10,7 +10,7 @@ socket_file = '/tmp/unicorn_padrino.sock'
 worker_processes 6
 working_directory root_path
 timeout 30
-listen 8080, tcp_nopush: false
+listen 3000, tcp_nopush: false
 listen socket_file, backlog: 1024
 
 pid pid_file
