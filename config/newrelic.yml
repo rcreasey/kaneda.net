@@ -1,19 +1,39 @@
----
-production:
-  error_collector:
-    capture_source: true
-    enabled: true
-    ignore_errors: ActionController::RoutingError
-  apdex_t: 0.5
-  ssl: false
-  monitor_mode: true
-  license_key: <%= ENV["NEW_RELIC_LICENSE_KEY"] %>
-  developer_mode: false
+# Here are the settings that are common to all environments
+common: &default_settings
+  license_key: '<%= ENV["NEW_RELIC_LICENSE_KEY"] %>'
   app_name: <%= ENV["NEW_RELIC_APP_NAME"] %>
-  transaction_tracer:
-    record_sql: obfuscated
-    enabled: true
-    stack_trace_threshold: 0.5
-    transaction_threshold: apdex_f
-  capture_params: false
+  monitor_mode: true
+  developer_mode: false
   log_level: info
+  ssl: false
+  apdex_t: 0.5
+  browser_monitoring:
+      auto_instrument: true
+  capture_params: false
+  transaction_tracer:
+    enabled: true
+    transaction_threshold: apdex_f
+    record_sql: obfuscated
+    stack_trace_threshold: 0.500
+  error_collector:
+    enabled: true
+    capture_source: false    
+    ignore_errors: ActionController::RoutingError
+
+development:
+  <<: *default_settings
+  monitor_mode: false
+  developer_mode: false
+
+test:
+  <<: *default_settings
+  monitor_mode: false
+
+production:
+  <<: *default_settings
+  monitor_mode: true
+
+staging:
+  <<: *default_settings
+  monitor_mode: true
+  app_name: <%= ENV["NEW_RELIC_APP_NAME"] %> (Staging)
