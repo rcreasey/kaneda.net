@@ -22,4 +22,6 @@ I'm married to my beautiful wife, Michelle, and together we have a miniature pin
 
 This site has seen several iterations, some more painful and hollow than others, but hopefully this time I'll have gotten it right. Besides, what is more eternal than a stylized [zsh-esque](https://github.com/robbyrussell/oh-my-zsh) command prompt?  It's currently an extremely light [padrino](http://www.padrinorb.com/) application hosted on [heroku](http://heroku.com).  If you want to see the source code for this site, check out its [github page](https://github.com/rcreasey/kaneda.net).
 
+This site is currently running on [heroku.com](http://heroku.com) on a [cedar](https://devcenter.heroku.com/articles/cedar) stack.
+
 [kaneda.net](http://kaneda.net) is the personal site of Ryan Creasey. There's not a whole lot to see here, other than random technical blatherings and comments about being a nerd.  If you want to see some of the code I've written, check out [my github page](https://github.com/rcreasey).
