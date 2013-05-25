@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  div#1(style='display: none')
+    span localhost %
+    span.command#2(style='display: none') ssh ryan@kaneda.net
+  div#3(style='display: none') ryan@kaneda.net's password:
+  div.prompt#4(style='display: none')
+    span kaneda.net %
+    span.command#5(style='display: none') tree -d ~
+  include includes/tree
+  div.prompt#7(style='display: none')
+    span kaneda.net %
+    span.command#cursor &nbsp;
+
+  script
+    function seven(){
+      $("#7").show();
+      setInterval(blink_closure, 1000);
+    }
+
+    function six(){
+      $("#6").show();
+      setTimeout(seven, 1000);
+    }
+
+    function five(){
+      $("#5").show().jTypeWriter({duration:0.5});;
+      setTimeout(six, 1000);
+    }
+
+    function four(){
+      $("#4").show();
+      setTimeout(five, 1000);
+    }
+
+    function three(){
+      $("#3").show();
+      setTimeout(four, 1000);
+    }
+
+    function two(){
+      $("#2").show().jTypeWriter({duration:0.7});
+      setTimeout(three, 1000);
+    }
+
+    function one(){
+      $("#1").show();
+      setTimeout(two, 1000);
+    }
+
+    $(document).ready(one);
