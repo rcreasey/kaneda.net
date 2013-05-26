@@ -13,6 +13,7 @@
     "express": "3.2.5",
     "jade": "0.30.x",
     "marked": "0.2.x",
+    "stylus": "0.32.x",
     "coffee-script": "1.6.x"
   }
 }
