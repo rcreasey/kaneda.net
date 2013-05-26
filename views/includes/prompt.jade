@@ -1,0 +1,26 @@
+mixin prompt
+  div#prompt(style='display: none')
+    span kaneda.net %
+    span.command#cursor &nbsp;
+
+  script
+    timeout = 1000;
+
+    var blink_closure = (function () {
+      var state = "on";
+      return function() {
+        if(state == "on"){
+          document.getElementById("cursor").style.visibility="hidden";
+          state = "off";
+        } else {
+          document.getElementById("cursor").style.visibility="visible";
+          state = "on";
+        }
+        return true;
+      };
+    })();
+
+    var prompt = function() {
+      $('#prompt').show();
+      return setInterval(blink_closure, timeout);
+    };

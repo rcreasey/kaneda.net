@@ -1,4 +1,5 @@
 extends layout
+include includes/prompt
 
 block content
   div#1(style='display: none')
@@ -9,23 +10,16 @@ block content
     span kaneda.net %
     span.command#5(style='display: none') tree -d ~
   include includes/tree
-  div.prompt#7(style='display: none')
-    span kaneda.net %
-    span.command#cursor &nbsp;
+  mixin prompt
 
   script
-    var five, four, one, seven, six, three, timeout, two;
+    var one, two, three, four, five, six, timeout;
 
     timeout = 1000;
 
-    seven = function() {
-      $('#7').show();
-      return setInterval(blink_closure, timeout);
-    };
-
     six = function() {
       $('#6').show();
-      return setTimeout(seven, timeout);
+      return setTimeout(prompt, timeout);
     };
 
     five = function() {

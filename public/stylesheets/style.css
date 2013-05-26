@@ -29,7 +29,7 @@ span.symlink {
   color: #F00;
 }
 
-.prompt {
+.prompt, #prompt {
   background-color: #ccc;
   color: #000;
 }

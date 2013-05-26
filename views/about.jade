@@ -1,4 +1,5 @@
 extends layout
+include includes/prompt
 
 block content
   div.prompt#1(style='display: none')
@@ -6,23 +7,16 @@ block content
     span.command#2(style='display: none') cat about.md
   div#3(style='display: none')
     include includes/about.markdown
-  div.prompt#4(style='display: none')
-    span kaneda.net %
-    span.command#cursor &nbsp;
+  mixin prompt
 
   script
-    var four, one, three, timeout, two;
+    var one, two, three, timeout;
 
     timeout = 1000;
 
-    four = function() {
-      $('#4').show();
-      return setInterval(blink_closure, timeout);
-    };
-
     three = function() {
       $('#3').show();
-      return setTimeout(four, timeout);
+      return setTimeout(prompt, timeout);
     };
 
     two = function() {
