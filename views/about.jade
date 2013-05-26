@@ -9,26 +9,19 @@ block content
     include includes/about.markdown
   mixin prompt
 
-  script
-    var one, two, three, timeout;
+  :coffeescript
+    timeout = 1000
 
-    timeout = 1000;
+    three = ->
+      $('#3').show()
+      setTimeout(prompt, timeout)
 
-    three = function() {
-      $('#3').show();
-      return setTimeout(prompt, timeout);
-    };
+    two = ->
+      $('#2').show().jTypeWriter({duration: 0.7})
+      setTimeout(three, timeout)
 
-    two = function() {
-      $('#2').show().jTypeWriter({
-        duration: 0.7
-      });
-      return setTimeout(three, timeout);
-    };
-
-    one = function() {
-      $('#1').show();
-      return setTimeout(two, timeout);
-    };
+    one = ->
+      $('#1').show()
+      setTimeout(two, timeout)
 
     $(document).ready(one);

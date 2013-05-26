@@ -12,43 +12,31 @@ block content
   include includes/tree
   mixin prompt
 
-  script
-    var one, two, three, four, five, six, timeout;
+  :coffeescript
+    timeout = 1000
 
-    timeout = 1000;
+    six = ->
+      $('#6').show()
+      setTimeout(prompt, timeout)
 
-    six = function() {
-      $('#6').show();
-      return setTimeout(prompt, timeout);
-    };
+    five = ->
+      $('#5').show().jTypeWriter({duration: 0.5})
+      setTimeout(six, timeout)
 
-    five = function() {
-      $('#5').show().jTypeWriter({
-        duration: 0.5
-      });
-      return setTimeout(six, timeout);
-    };
+    four = ->
+      $('#4').show()
+      setTimeout(five, timeout)
 
-    four = function() {
-      $('#4').show();
-      return setTimeout(five, timeout);
-    };
+    three = ->
+      $('#3').show()
+      setTimeout(four, timeout)
 
-    three = function() {
-      $('#3').show();
-      return setTimeout(four, timeout);
-    };
+    two = ->
+      $('#2').show().jTypeWriter({duration: 0.7})
+      setTimeout(three, timeout)
 
-    two = function() {
-      $('#2').show().jTypeWriter({
-        duration: 0.7
-      });
-      return setTimeout(three, timeout);
-    };
-
-    one = function() {
-      $('#1').show();
-      return setTimeout(two, timeout);
-    };
+    one = ->
+      $('#1').show()
+      setTimeout(two, timeout)
 
     $(document).ready(one);
