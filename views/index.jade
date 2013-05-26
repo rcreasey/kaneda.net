@@ -14,39 +14,47 @@ block content
     span.command#cursor &nbsp;
 
   script
-    function seven(){
-      $("#7").show();
-      setInterval(blink_closure, 1000);
-    }
+    var five, four, one, seven, six, three, timeout, two;
 
-    function six(){
-      $("#6").show();
-      setTimeout(seven, 1000);
-    }
+    timeout = 1000;
 
-    function five(){
-      $("#5").show().jTypeWriter({duration:0.5});;
-      setTimeout(six, 1000);
-    }
+    seven = function() {
+      $('#7').show();
+      return setInterval(blink_closure, timeout);
+    };
 
-    function four(){
-      $("#4").show();
-      setTimeout(five, 1000);
-    }
+    six = function() {
+      $('#6').show();
+      return setTimeout(seven, timeout);
+    };
 
-    function three(){
-      $("#3").show();
-      setTimeout(four, 1000);
-    }
+    five = function() {
+      $('#5').show().jTypeWriter({
+        duration: 0.5
+      });
+      return setTimeout(six, timeout);
+    };
 
-    function two(){
-      $("#2").show().jTypeWriter({duration:0.7});
-      setTimeout(three, 1000);
-    }
+    four = function() {
+      $('#4').show();
+      return setTimeout(five, timeout);
+    };
 
-    function one(){
-      $("#1").show();
-      setTimeout(two, 1000);
-    }
+    three = function() {
+      $('#3').show();
+      return setTimeout(four, timeout);
+    };
+
+    two = function() {
+      $('#2').show().jTypeWriter({
+        duration: 0.7
+      });
+      return setTimeout(three, timeout);
+    };
+
+    one = function() {
+      $('#1').show();
+      return setTimeout(two, timeout);
+    };
 
     $(document).ready(one);

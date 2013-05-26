@@ -5,30 +5,36 @@ block content
     span kaneda.net %
     span.command#2(style='display: none') cat about.md
   div#3(style='display: none')
-    include includes/about.md.jade
+    include includes/about.markdown
   div.prompt#4(style='display: none')
     span kaneda.net %
     span.command#cursor &nbsp;
 
   script
-    function four(){
-      $("#4").show();
-      setInterval(blink_closure, 1000);
-    }
+    var four, one, three, timeout, two;
 
-    function three(){
-      $("#3").show();
-      setTimeout(four, 1000);
-    }
+    timeout = 1000;
 
-    function two(){
-      $("#2").show().jTypeWriter({duration:0.7});
-      setTimeout(three, 1000);
-    }
+    four = function() {
+      $('#4').show();
+      return setInterval(blink_closure, timeout);
+    };
 
-    function one(){
-      $("#1").show();
-      setTimeout(two, 1000);
-    }
+    three = function() {
+      $('#3').show();
+      return setTimeout(four, timeout);
+    };
+
+    two = function() {
+      $('#2').show().jTypeWriter({
+        duration: 0.7
+      });
+      return setTimeout(three, timeout);
+    };
+
+    one = function() {
+      $('#1').show();
+      return setTimeout(two, timeout);
+    };
 
     $(document).ready(one);

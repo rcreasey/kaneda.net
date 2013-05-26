@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "express": "3.2.5",
-    "jade": "*",
-    "marked": "0.2.x"
+    "jade": "0.30.x",
+    "marked": "0.2.x",
+    "coffee-script": "1.6.x"
   }
 }
