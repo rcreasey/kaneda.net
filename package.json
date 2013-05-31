@@ -1,7 +1,12 @@
 {
   "name": "kaneda.net",
+  "author": "Ryan C. Creasey <ryan@kaneda.net>",
+  "description": "The personal website of Ryan C. Creasey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rcreasey/kaneda.net.git"
+  },
   "version": "1.0.0",
-  "private": true,
   "engines": {
     "node": "0.10.x",
     "npm":  "1.2.x"
