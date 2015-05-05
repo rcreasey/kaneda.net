@@ -1,0 +1,51 @@
+@import url(http://fonts.googleapis.com/css?family=Droid\+Sans\+Mono)
+
+body
+  font-family 'Droid Sans Mono', Monaco, "Lucida Console", monospace
+  font-size 10pt
+  text-shadow 0px 0px 10px #fff
+  padding 2px
+  background-color #000
+  color #fff
+  
+#terminal
+  background: -webkit-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 1px,
+    rgba(0,0,0,0.25) 1px,
+    rgba(0,0,0,0.25) 2px
+  );
+  -webkit-background-size: 100% 2px;
+
+  background: -moz-repeating-linear-gradient(
+    top,
+    transparent 0px,
+    transparent 1px,
+    rgba(0,0,0,0.25) 1px,
+    rgba(0,0,0,0.25) 2px
+  );
+  -moz-background-size: 100% 2px;
+
+pre
+  margin-top 0 !important
+
+a
+  color #FFF
+  &:visited
+    color #CCC
+
+span
+  &.symlink
+    color #F00
+
+.prompt, #prompt
+  background-color #ccc
+  color #000
+
+.command
+  margin-left .5em
+
+#cursor
+  font-weight normal
+  background-color #000
