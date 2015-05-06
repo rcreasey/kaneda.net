@@ -38,26 +38,27 @@ span
     transparent 1px, 
     alpha($foreground, 0.5) 1px, 
     alpha($foreground, 0.5) 2px)
-  color $background
+  color $foreground
   text-shadow none
 
 .command
   margin-left .5em
 
+$keyframe-blink = blink
 #cursor
   font-weight normal
-  background-color $background
-  -webkit-animation 1s blink step-end infinite
-  -moz-animation 1s blink step-end infinite
-  -ms-animation 1s blink step-end infinite
-  -o-animation 1s blink step-end infinite
-  animation 1s blink step-end infinite
+  background-color $foreground
+  -webkit-animation 1s $keyframe-blink step-end infinite
+  -moz-animation 1s $keyframe-blink step-end infinite
+  -ms-animation 1s $keyframe-blink step-end infinite
+  -o-animation 1s $keyframe-blink step-end infinite
+  animation 1s $keyframe-blink step-end infinite
 
-@keyframes blink {
+@keyframes $keyframe-blink {
   from,to {
-    color transparent
+    visibility hidden
   }
   50% { 
-    color $foreground
+    visibility visible
   }
 }
