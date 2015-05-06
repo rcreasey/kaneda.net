@@ -1,51 +1,63 @@
 @import url(http://fonts.googleapis.com/css?family=Droid\+Sans\+Mono)
+@import 'bower_components/nib'
+
+$foreground = white
+$background = black
 
 body
+  background linear-gradient(top, 
+    transparent 0px, 
+    transparent 1px, 
+    alpha($foreground, 0.25) 1px, 
+    alpha($foreground, 0.25) 2px)
+  -webkit-background-size 100% 2px
+  -moz-background-size 100% 2px
   font-family 'Droid Sans Mono', Monaco, "Lucida Console", monospace
   font-size 10pt
-  text-shadow 0px 0px 10px #fff
+  text-shadow 0px 0px 10px $foreground
   padding 2px
-  background-color #000
-  color #fff
+  background-color $background
+  color $foreground
   
-#terminal
-  background: -webkit-repeating-linear-gradient(
-    top,
-    transparent 0px,
-    transparent 1px,
-    rgba(0,0,0,0.25) 1px,
-    rgba(0,0,0,0.25) 2px
-  );
-  -webkit-background-size: 100% 2px;
-
-  background: -moz-repeating-linear-gradient(
-    top,
-    transparent 0px,
-    transparent 1px,
-    rgba(0,0,0,0.25) 1px,
-    rgba(0,0,0,0.25) 2px
-  );
-  -moz-background-size: 100% 2px;
-
 pre
   margin-top 0 !important
 
 a
-  color #FFF
+  color $foreground
   &:visited
-    color #CCC
+    color lightness($foreground, 80%)
 
 span
   &.symlink
-    color #F00
+    color lightness($foreground, 20%)
 
 .prompt, #prompt
-  background-color #ccc
-  color #000
+  background-color lightness($foreground, 80%)
+  background linear-gradient(top, 
+    transparent 0px, 
+    transparent 1px, 
+    alpha($foreground, 0.5) 1px, 
+    alpha($foreground, 0.5) 2px)
+  color $background
+  text-shadow none
 
 .command
   margin-left .5em
 
 #cursor
   font-weight normal
-  background-color #000
+  background-color $background
+  -webkit-animation 1s blink step-end infinite
+  -moz-animation 1s blink step-end infinite
+  -ms-animation 1s blink step-end infinite
+  -o-animation 1s blink step-end infinite
+  animation 1s blink step-end infinite
+
+@keyframes blink {
+  from,to {
+    color transparent
+  }
+  50% { 
+    color $foreground
+  }
+}

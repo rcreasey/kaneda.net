@@ -19,7 +19,7 @@ module.exports = function(environment) {
        'font-src': "'self' data: fonts.gstatic.com",
        'connect-src': "'self'",
        'img-src': "'self'",
-       'style-src': "'self' fonts.googleapis.com",
+       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
        'media-src': "'self'"
     },
     
@@ -31,9 +31,9 @@ module.exports = function(environment) {
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
+    ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {

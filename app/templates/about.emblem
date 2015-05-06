@@ -1,0 +1,4 @@
+.prompt#1
+  span kaneda.net %
+  span.command#2 cat about.md
+#3
