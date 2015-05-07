@@ -1,0 +1,7 @@
+<div {{bind-attr class=":prompt host:localhost"}}>
+  <span class="hostname">{{#if host}}{{ host }}{{ else }}kaneda.net{{/if}} %</span>
+  <span {{bind-attr class="command:command:cursor"}}>{{ command }}</span>
+  {{#if response}}
+  <div class="response">{{response}}</div>
+  {{/if}}
+</div>

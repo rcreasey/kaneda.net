@@ -1,0 +1,3 @@
+.block {{{ command-prompt command="cat about.md"}}}
+  {{{ partial "includes/about" }}}
+.block {{{ command-prompt }}}
