@@ -47,10 +47,10 @@
     more eternal than a stylized {{link-for 'zsh-esque' 'https://github.com/sorin-ionescu/prezto'}} 
     command prompt?
 
-  p It's currently an extremely light {{link-for 'express' 'http://expressjs.com/'}}
-    {{link-for 'node.js application' 'http://nodejs.org/'}} with a frontend written in
-    {{link-for 'ember.js' 'http://emberjs.com'}}.  If you want to see the source code 
-    for this site, check out its {{link-for 'github page' 'https://github.com/rcreasey/kaneda.net'}}.
+  p It's currently an extremely light {{link-for 'node.js application' 'http://nodejs.org/'}} 
+    with a frontend written in {{link-for 'ember.js' 'http://emberjs.com'}}.  If you want to see
+    the source code for this site, check out its 
+    {{link-for 'github page' 'https://github.com/rcreasey/kaneda.net'}}.
 
   p This site is currently running on {{link-for 'heroku.com' 'http://heroku.com'}} 
     on a {{link-for 'cedar-14' 'https://devcenter.heroku.com/articles/cedar'}} stack.
