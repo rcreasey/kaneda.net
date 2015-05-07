@@ -1,60 +1,61 @@
-h1 About Me
+.response
+  h1 About Me
 
-h2 The Site
+  h2 The Site
 
-p Contrary to what most of you might think, this site has nothing to do with 
-  what you came here to find.
+  p Contrary to what most of you might think, this site has nothing to do with 
+    what you came here to find.
 
-p It has nothing to do with {{link-for 'this movie' 'http://www.imdb.com/title/tt0094625/'}},
-  {{link-for 'this math professor' 'http://math.uci.edu/~mkaneda/'}}
-  or even {{link-for 'the dog' 'http://kaneda.com'}}.
+  p It has nothing to do with {{link-for 'this movie' 'http://www.imdb.com/title/tt0094625/'}},
+    {{link-for 'this math professor' 'http://math.uci.edu/~mkaneda/'}}
+    or even {{link-for 'the dog' 'http://kaneda.com'}}.
 
-p Remember when the intar-web was nothing more than a few bbs tied loosely together 
-  and the first time you dialed up your old analog modem? Well, being indecisive 
-  and just seeing {{link-for 'Shogun' 'http://www.imdb.com/title/tt0080274/'}},
-  I asked a Japanese friend of mine for a common japanese name. "I have a 
-  brother named 'Kaneda'," he offered. I've been typing 'kaneda' at login prompts 
-  ever since.
+  p Remember when the intar-web was nothing more than a few bbs tied loosely together 
+    and the first time you dialed up your old analog modem? Well, being indecisive 
+    and just seeing {{link-for 'Shogun' 'http://www.imdb.com/title/tt0080274/'}},
+    I asked a Japanese friend of mine for a common japanese name. "I have a 
+    brother named 'Kaneda'," he offered. I've been typing 'kaneda' at login prompts 
+    ever since.
 
-p However, it wasn't until my sophomore year in college that I finally decided 
-  to get a webpage, and luckily the domain wasn't squatted (well, if you want 
-  to call the $75 domain registration those pirates over at NetSol were charging). 
-  As of Feb 2007, kaneda.net is eight years old and has now sprung up into many 
-  different aspects.
+  p However, it wasn't until my sophomore year in college that I finally decided 
+    to get a webpage, and luckily the domain wasn't squatted (well, if you want 
+    to call the $75 domain registration those pirates over at NetSol were charging). 
+    As of Feb 2007, kaneda.net is eight years old and has now sprung up into many 
+    different aspects.
 
-h2 Ryan C. Creasey
+  h2 Ryan C. Creasey
 
-p I'm a graduate of {{link-for 'UC Irvine' 'http://www.uci.edu'}} majoring in 
-  Information and Computer Science, with a specialization in Networks and 
-  Distributed Systems.
+  p I'm a graduate of {{link-for 'UC Irvine' 'http://www.uci.edu'}} majoring in 
+    Information and Computer Science, with a specialization in Networks and 
+    Distributed Systems.
 
-p I'm currently employed as a Senior Systems Engineer II for the 
-  {{link-for 'Starcraft' 'http://us.battle.net/sc2/en/'}} and
-  {{link-for 'Heroes of the Storm' 'http://us.battle.net/heroes/en/'}} team at 
-  {{link-for 'Blizzard Entertainment' 'http://blizzard.com'}}. I'm not able to 
-  disclose much about my current role, but it's a pretty awesome gig.  You can 
-  check out {{link-for 'my LinkedIn profile' 'http://www.linkedin.com/in/ryancreasey'}}
-  , if you're really that interested in my current or previous employment.
+  p I'm currently employed as a Senior Systems Engineer II for the 
+    {{link-for 'Starcraft' 'http://us.battle.net/sc2/en/'}} and
+    {{link-for 'Heroes of the Storm' 'http://us.battle.net/heroes/en/'}} team at 
+    {{link-for 'Blizzard Entertainment' 'http://blizzard.com'}}. I'm not able to 
+    disclose much about my current role, but it's a pretty awesome gig.  You can 
+    check out {{link-for 'my LinkedIn profile' 'http://www.linkedin.com/in/ryancreasey'}}
+    , if you're really that interested in my current or previous employment.
 
-p I'm married to my beautiful wife, Michelle, and together we have a miniature 
-  pinscher, Mr. T.  In September 2015, we had our amazing daughter, Ember.
+  p I'm married to my beautiful wife, Michelle, and together we have a miniature 
+    pinscher, Mr. T.  In September 2015, we had our amazing daughter, Ember.
 
-h2 The Site
+  h2 The Site
 
-p This site has seen several iterations, some more painful and hollow than 
-  others, but hopefully this time I'll have gotten it right. Besides, what is 
-  more eternal than a stylized {{link-for 'zsh-esque' 'https://github.com/sorin-ionescu/prezto'}} 
-  command prompt?
+  p This site has seen several iterations, some more painful and hollow than 
+    others, but hopefully this time I'll have gotten it right. Besides, what is 
+    more eternal than a stylized {{link-for 'zsh-esque' 'https://github.com/sorin-ionescu/prezto'}} 
+    command prompt?
 
-p It's currently an extremely light {{link-for 'express' 'http://expressjs.com/'}}
-  {{link-for 'node.js application' 'http://nodejs.org/'}} with a frontend written in
-  {{link-for 'ember.js' 'http://emberjs.com'}}.  If you want to see the source code 
-  for this site, check out its {{link-for 'github page' 'https://github.com/rcreasey/kaneda.net'}}.
+  p It's currently an extremely light {{link-for 'express' 'http://expressjs.com/'}}
+    {{link-for 'node.js application' 'http://nodejs.org/'}} with a frontend written in
+    {{link-for 'ember.js' 'http://emberjs.com'}}.  If you want to see the source code 
+    for this site, check out its {{link-for 'github page' 'https://github.com/rcreasey/kaneda.net'}}.
 
-p This site is currently running on {{link-for 'heroku.com' 'http://heroku.com'}} 
-  on a {{link-for 'cedar-14' 'https://devcenter.heroku.com/articles/cedar'}} stack.
+  p This site is currently running on {{link-for 'heroku.com' 'http://heroku.com'}} 
+    on a {{link-for 'cedar-14' 'https://devcenter.heroku.com/articles/cedar'}} stack.
 
-p {{link-for 'kaneda.net' 'http://kaneda.net'}} is the personal site of Ryan Creasey. 
-  There's not a whole lot to see here, other than random technical blatherings and 
-  comments about being a nerd.  If you want to see some of the code I've written, 
-  check out {{link-for 'my github page' 'https://github.com/rcreasey'}}.
+  p {{link-for 'kaneda.net' 'http://kaneda.net'}} is the personal site of Ryan Creasey. 
+    There's not a whole lot to see here, other than random technical blatherings and 
+    comments about being a nerd.  If you want to see some of the code I've written, 
+    check out {{link-for 'my github page' 'https://github.com/rcreasey'}}.

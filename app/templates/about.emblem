@@ -1,5 +1,3 @@
-.prompt#1
-  span kaneda.net %
-  span.command#2 cat about.md
-#3 {{{ partial "includes/about" }}}
-#4 {{{ partial "components/prompt" }}}
+div {{{ command-prompt command="cat about.md"}}}
+div {{{ partial "includes/about" }}}
+div {{{ command-prompt }}}

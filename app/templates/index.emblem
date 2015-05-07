@@ -1,10 +1,4 @@
-#1
-  span localhost %
-  span.command#2 ssh ryan@kaneda.net
-#3 ryan@kaneda.net's password:
-.prompt#4
-  span kaneda.net %
-  span.command#5 tree -d ~
-#6
-  pre {{{ partial "includes/tree" }}}
-#7 {{{ partial "components/prompt" }}}
+div {{{ command-prompt host="localhost" command="ssh ryan@kaneda.net" response="ryan@kaneda.net's password:" }}}
+div {{{ command-prompt command="tree -d ~" }}}
+div {{{ partial "includes/tree" }}}
+div {{{ command-prompt }}}

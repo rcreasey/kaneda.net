@@ -31,7 +31,7 @@ span
   &.symlink
     color lightness($foreground, 20%)
 
-.prompt, #prompt
+.prompt
   background-color lightness($foreground, 80%)
   background linear-gradient(top, 
     transparent 0px, 
@@ -40,12 +40,12 @@ span
     alpha($foreground, 0.5) 2px)
   color $foreground
   text-shadow none
-
-.command
-  margin-left .5em
+  
+  &.localhost
+    background transparent
 
 $keyframe-blink = blink
-#cursor
+.cursor
   font-weight normal
   background-color $foreground
   -webkit-animation 1s $keyframe-blink step-end infinite
