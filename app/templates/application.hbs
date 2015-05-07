@@ -1,0 +1,25 @@
+<div id="terminal">
+  {{ outlet }}
+</div>
+
+<script>
+  $(document).ready(function() {
+    $.each($('.block:not([id])'), function(i, e) {
+
+      $(e).delay(i*2000).queue(function(callback) {
+        
+        $(e).find('.hostname, .command, .response').hide();
+
+        $(e).show()
+          .find('.hostname').show()
+          .next('.command').show().typewrite(function() {
+            $(e).find('.response').delay(1000).show();
+            callback();
+          });
+
+        
+      })
+            
+    });
+  });
+</script>
