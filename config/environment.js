@@ -15,11 +15,11 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
        'default-src': "'none'",
-       'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' kaneda.net kaneda.dev",
        'font-src': "'self' data: fonts.gstatic.com",
        'connect-src': "'self'",
        'img-src': "'self'",
-       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
+       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com kaneda.net kaneda.dev",
        'media-src': "'self'"
     },
     
@@ -31,9 +31,9 @@ module.exports = function(environment) {
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
 
   if (environment === 'test') {
