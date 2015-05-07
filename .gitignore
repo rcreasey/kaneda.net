@@ -1,4 +1,18 @@
-.DS_Store
-log/*
-node_modules/*
+# compiled output
+/dist
+/tmp
+
+# environment variables
+.env
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
 npm-debug.log
+testem.log
