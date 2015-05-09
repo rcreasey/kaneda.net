@@ -2,7 +2,7 @@
   "name": "kaneda.net",
   "author": "Ryan C. Creasey <ryan@kaneda.net>",
   "description": "The personal website of Ryan C. Creasey",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "directories": {
     "doc": "doc",
