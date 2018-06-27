@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/rcreasey
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://kaneda.net
+  * I am rcreasey (https://keybase.io/rcreasey) on keybase.
+  * I have a public key ASAaTcYf-p7Ezr0ut0CDnHKrVGaA09J75dxV8Qem2RG_2wo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01201a4dc61ffa9ec4cebd2eb740839c72ab546680d3d27be5dc55f107a6d911bfdb0a",
+      "host": "keybase.io",
+      "kid": "01201a4dc61ffa9ec4cebd2eb740839c72ab546680d3d27be5dc55f107a6d911bfdb0a",
+      "uid": "dcaf1023c27e8c2df635b708fe120419",
+      "username": "rcreasey"
+    },
+    "merkle_root": {
+      "ctime": 1530073971,
+      "hash": "1705593ce6cf2a485d22fce205f15102b37cb0e2c8491878c7eb2205087d7730e46026118799c4b27902612629ceaf12b1bf7d2daeb6a0aa8ce1a8ceed0603cb",
+      "hash_meta": "674ec7dad77723cac938bd072ba82a04d1f9332e55be7929dad1b5f673ddd24d",
+      "seqno": 3150820
+    },
+    "service": {
+      "entropy": "ALXm06eAW6i6Ox2meySjvPB1",
+      "hostname": "kaneda.net",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.1.2"
+  },
+  "ctime": 1530074047,
+  "expire_in": 504576000,
+  "prev": "932941cce9e2938c4a30d29d877a47b1cfe5beb60be748d2cf577e442c0dc6b2",
+  "seqno": 12,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgGk3GH/qexM69LrdAg5xyq1RmgNPSe+XcVfEHptkRv9sKp3BheWxvYWTESpcCDMQgkylBzOnik4xKMNKdh3pHsc/lvrYL50jSz1d+RCwNxrLEIGTTUBrzcUzQLXkBKfubNY2UElcQn0FKLJLytg3PcXXyAgHCo3NpZ8RAyYi6GeYwIBnJHmRNgUXmQBe09Zz7yd67CD5eDAdUU1NF72QkVK0WKeRxT/hXIIPvmzYObOsVQ4ehhWAz7CSUBahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIML2BOMDl7fi+ZMl3+DuUeFvqlqsaXcfv9UXxmIOCAwRo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/rcreasey
+
+==================================================================
