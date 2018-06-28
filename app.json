@@ -1,7 +1,6 @@
 {
   "name": "kaneda.net",
-  "scripts": {
-  },
+  "scripts": {},
   "env": {
     "BUILDPACK_URL": {
       "required": true
@@ -23,6 +22,9 @@
     }
   },
   "formation": {
+    "web": {
+      "quantity": 1
+    }
   },
   "addons": [
     "newrelic",
@@ -31,7 +33,7 @@
   ],
   "buildpacks": [
     {
-      "url": "https://github.com/tonycoco/heroku-buildpack-ember-cli.git"
+      "url": "https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz"
     }
   ]
 }
