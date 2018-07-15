@@ -1,4 +1,0 @@
-.block {{{ command-prompt host="localhost" command="ssh ryan@kaneda.net" response="ryan@kaneda.net's password:" }}}
-.block {{{ command-prompt command="tree -d ~" }}}
-  {{{ partial "includes/tree" }}}
-.block {{{ command-prompt }}}
