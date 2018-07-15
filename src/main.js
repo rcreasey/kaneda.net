@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueTyperPlugin from 'vue-typer'
+
+Vue.use(VueTyperPlugin)
 
 Vue.config.productionTip = false
 

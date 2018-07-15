@@ -15,14 +15,15 @@ export default {
 </style>
 
 <style lang="css">
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 html {
   height: 100%;
 }
 
 body {
   background: black;
-  color: lightblue;
-  font-family: Hack, Monaco, "Lucida Console", monospace;
+  color: lightblue !important;
+  font-family: "Source Code Pro", Hack, Monaco, "Lucida Console", monospace;
   font-size: 10pt;
   text-shadow: 0 0 10px lightblue;
   margin: 0;
@@ -53,11 +54,22 @@ body {
   }
 }
 
-.console {
-  padding: 0.5rem;
+#console {
+  margin: 0.5rem;
 }
 
 .prompt {
   margin-right: 0.5rem;
+}
+
+.vue-typer .custom.char {
+  color: lightblue;
+  background-color: transparent;
+}
+
+.vue-typer .custom.caret {
+  background-color: lightblue;
+  margin-left: 0.25rem;
+  width: 0.5rem;
 }
 </style>
