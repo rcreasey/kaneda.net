@@ -16,6 +16,7 @@ RUN npm install --production
 
 COPY --from=build-stage /app/dist /app/dist
 COPY --from=build-stage /app/static/* /app/dist/
+COPY --from=build-stage /app/static/.well-known /app/dist/.well-known/
 COPY --from=build-stage /app/server.js /app/server.js
 
 EXPOSE 5000
