@@ -14,10 +14,6 @@ export default {
 @import "src/assets/scss/scanlines.scss"
 </style>
 
-<style lang="scss">
-@import "src/assets/scss/console.scss"
-</style>
-
 <style lang="css">
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 html {
@@ -33,5 +29,9 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
+}
+
+#app {
+  padding: 0.5rem;
 }
 </style>

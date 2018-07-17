@@ -9,7 +9,8 @@ export default new Router({
     {
       path: '/',
       name: 'Localhost',
-      component: Localhost
+      component: Localhost,
+      meta: { bodyClass: 'scanlines' }
     }
   ]
 })
