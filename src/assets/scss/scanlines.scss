@@ -5,14 +5,14 @@ $scan-width: 2px;
 $scan-crt: true;
 
 // frames-per-second (should be > 1), only applies if $scan-crt: true;
-$scan-fps: 15;
+$scan-fps: 30;
 
 // scanline-color (rgba)
 $scan-color: rgba(black, .3);
 
 // set z-index on 8, like in ♥ 8-bits ♥, or…
 // set z-index on 2147483648 or more to enable scanlines on Chrome fullscreen (doesn't work in Firefox or IE);
-$scan-z-index: 2147483648; 
+$scan-z-index: 2147483648;
 
 /* MOVING SCANLINE SETTINGS */
 
@@ -79,7 +79,7 @@ $scan-opacity: .75;
         );
         background-size: 100% $scan-width*2;
         @include scan-crt($scan-crt);
-    }  
+    }
 }
 
 /* ANIMATE UNIQUE SCANLINE */

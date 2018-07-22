@@ -22,13 +22,28 @@ html {
 
 body {
   background: #333;
-  color: lightblue !important;
+  color: lightblue;
   font-family: "Source Code Pro", Hack, Monaco, "Lucida Console", monospace;
   font-size: 10pt;
   text-shadow: 0 0 10px lightblue;
   margin: 0;
   padding: 0;
   min-height: 100%;
+}
+
+input {
+  color: lightblue;
+  font-family: "Source Code Pro", Hack, Monaco, "Lucida Console", monospace;
+  font-size: 10pt;
+  text-shadow: 0 0 10px lightblue;
+}
+
+pre {
+  color: lightblue;
+  font-family: "Source Code Pro", Hack, Monaco, "Lucida Console", monospace;
+  font-size: 10pt;
+  text-shadow: 0 0 10px lightblue;
+  margin: 0;
 }
 
 #app {
