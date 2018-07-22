@@ -1,14 +1,14 @@
 <template>
-  <div class="shell" v-show="entry.visible">
-    <div class="command" v-if="entry.command">
+  <div class="shell" v-show="visible">
+    <div class="command" v-if="command">
       <div class="prompt">
-        <span class="hostname">{{ entry.hostname }} %</span>
-        <!-- <vue-typer :text="entry.command" :pre-type-delay="0" :repeat="0" @completed="process_prompt"/> -->
-        <span class="output">{{ entry.command }}</span>
+        <span class="hostname">{{ hostname }} %</span>
+        <!-- <vue-typer :text="command" :pre-type-delay="0" :repeat="0" @completed="process_prompt"/> -->
+        <span class="output">{{ command }}</span>
       </div>
       <span class="cursor" v-show="display_result_cursor"></span>
       <transition name="result">
-        <pre class="result" v-if="display_result" v-html="entry.result"></pre>
+        <pre class="result" v-if="display_result" v-html="result"></pre>
       </transition>
     </div>
   </div>
@@ -19,18 +19,12 @@ export default {
   name: 'Prompt',
   props: {
     id: { type: Number, default: 0 },
-    entry: { type: Object,
-      default: () => {
-        return {
-          hostname: { type: String, default: 'localhost' },
-          command: { type: String, default: '' },
-          result: { type: String, default: '' },
-          delay: { type: Number, default: 0 },
-          interactive: { type: Boolean, default: false },
-          visible: { type: Boolean, default: false }
-        }
-      }
-    }
+    hostname: { type: String, default: 'localhost' },
+    command: { type: String, default: '' },
+    result: { type: String, default: '' },
+    delay: { type: Number, default: 0 },
+    interactive: { type: Boolean, default: false },
+    visible: { type: Boolean, default: false }
   },
   data () {
     return {
@@ -49,7 +43,7 @@ export default {
     },
     process_prompt: function () {
       this.display_result_cursor = true
-      setTimeout(this.prompt_complete, this.entry.delay * 1000)
+      setTimeout(this.prompt_complete, this.delay * 1000)
     }
   },
   mounted: function () {

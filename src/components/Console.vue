@@ -4,6 +4,11 @@
       :key="entry.id"
       :entry="entry"
       :id="index"
+      :hostname="entry.hostname"
+      :command="entry.command"
+      :result="entry.result"
+      :delay="entry.delay"
+      :visible="entry.visible"
       v-on:command-complete="commandComplete" />
 
     <div class="interactive prompt" v-show="is_interactive">
@@ -57,7 +62,6 @@ export default {
         command: command + ' ' + args,
         result: 'something something',
         delay: 0,
-        interactive: false,
         visible: true
       })
       this.$nextTick(() => {
@@ -67,6 +71,7 @@ export default {
     }
   },
   mounted: function () {
+    console.log(this.history)
     this.history[0].visible = true
   }
 }
