@@ -8,15 +8,16 @@
       :result="entry.result"
       :delay="entry.delay"
       :visible="entry.visible"
+      :interactive="entry.interactive"
       v-on:command-complete="commandComplete" />
 
     <div class="interactive prompt" v-show="is_interactive">
       <span class="hostname">kaneda.net %</span>
       <span class="cursor" v-show="show_interactive_cursor"></span>
-      <input
-        v-model="user_input"
+      <input id="user_input"
+        v-model="user_input" v-focus
         ref="input" type="text"
-        autofocus autocomplete="off"
+        autocomplete="off"
         v-bind:class="{active: active_prompt}"
         @focus="check_command"
         @blur="check_command"
@@ -24,6 +25,8 @@
         @keyup.enter="send_command"
       />
     </div>
+    <pre>{{ history }}</pre>
+
   </div>
 </template>
 
@@ -42,16 +45,20 @@ export default {
       user_input: ''
     }
   },
+  directives: {
+    focus: {
+      inserted: function (el) {
+        el.focus()
+      }
+    }
+  },
   props: {
-    history: { type: Array, default: () => { return [] }}
+    history: { type: Array, default: () => { return [] } }
   },
   methods: {
     commandComplete: function (id) {
       this.history[id].visible = true
       this.is_interactive = true
-    },
-    focus_input (e) {
-      this.$refs.input.focus()
     },
     check_command () {
       this.show_interactive_cursor = !this.user_input.length
@@ -63,7 +70,7 @@ export default {
         hostname: 'kaneda.net',
         command: command + ' ' + args,
         result: 'command not found: ' + command,
-        delay: 0,
+        interactive: true,
         visible: true
       })
       this.$nextTick(() => {
@@ -82,6 +89,14 @@ export default {
 </script>
 
 <style scoped>
+div.prompt {
+  display: flex;
+}
+
+span.hostname {
+  margin-right: 0.5rem;
+}
+
 input {
   padding: 0;
   margin: 0 0 0 -0.5rem;
@@ -89,7 +104,6 @@ input {
   outline: none;
   background: none;
   min-width: 0;
-  width: 75%;
   flex: 1;
 }
 

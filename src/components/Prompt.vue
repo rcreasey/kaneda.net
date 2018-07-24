@@ -3,8 +3,8 @@
     <div class="command" v-if="command">
       <div class="prompt">
         <span class="hostname">{{ hostname }} %</span>
-        <!-- <vue-typer :text="command" :pre-type-delay="0" :repeat="0" @completed="process_prompt"/> -->
-        <span class="output">{{ command }}</span>
+        <span v-if="isInteractive" class="output">{{ command }}</span>
+        <vue-typer v-else :text="command" :pre-type-delay="typeDelay" :repeat="0" @completed="process_prompt"/>
       </div>
       <span class="cursor" v-show="display_result_cursor"></span>
       <transition name="result">
@@ -25,6 +25,13 @@ export default {
     delay: { type: Number, default: 0 },
     interactive: { type: Boolean, default: false },
     visible: { type: Boolean, default: false }
+  },
+  computed: {
+    isInteractive: function () {
+      console.log(this.interactive)
+      return this.interactive
+    },
+    typeDelay: function () { return this.delay * 2 }
   },
   data () {
     return {
@@ -83,11 +90,6 @@ span.cursor {
 </style>
 
 <style scoped>
-  span.prompt {
-    display: inline-flex;
-    flex-flow: column;
-  }
-
   span.result {
     display: flex;
     flex-flow: column;

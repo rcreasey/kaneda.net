@@ -19,3 +19,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+document.body.addEventListener('click', function () { document.getElementById('user_input').focus() }, true)
