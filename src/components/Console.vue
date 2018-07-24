@@ -43,7 +43,7 @@ export default {
     }
   },
   props: {
-    history: { type: Array }
+    history: { type: Array, default: () => { return [] }}
   },
   methods: {
     commandComplete: function (id) {
@@ -74,7 +74,9 @@ export default {
     }
   },
   mounted: function () {
-    this.history[0].visible = true
+    if (this.history.length) {
+      this.history[0].visible = true
+    }
   }
 }
 </script>
