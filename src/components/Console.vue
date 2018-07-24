@@ -2,7 +2,6 @@
   <div id="console">
     <Prompt v-for="(entry, index) in history"
       :key="entry.id"
-      :entry="entry"
       :id="index"
       :hostname="entry.hostname"
       :command="entry.command"
@@ -18,6 +17,7 @@
         v-model="user_input"
         ref="input" type="text"
         autofocus autocomplete="off"
+        v-bind:class="{active: active_prompt}"
         @focus="check_command"
         @blur="check_command"
         @keyup="check_command"
@@ -37,6 +37,7 @@ export default {
   data () {
     return {
       is_interactive: false,
+      active_prompt: false,
       show_interactive_cursor: false,
       user_input: ''
     }
@@ -54,19 +55,21 @@ export default {
     },
     check_command () {
       this.show_interactive_cursor = !this.user_input.length
+      this.active_prompt = true
     },
     send_command () {
       const [command, ...args] = this.user_input.trim().split(' ')
       this.history.push({
         hostname: 'kaneda.net',
         command: command + ' ' + args,
-        result: 'something something',
+        result: 'command not found: ' + command,
         delay: 0,
         visible: true
       })
       this.$nextTick(() => {
         this.user_input = ''
         this.show_interactive_cursor = true
+        this.active_prompt = false
       })
     }
   },
@@ -80,12 +83,16 @@ export default {
 <style scoped>
 input {
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 -0.5rem;
   border: none;
   outline: none;
   background: none;
   min-width: 0;
   width: 75%;
   flex: 1;
+}
+
+input.active {
+  margin-left: 0;
 }
 </style>
