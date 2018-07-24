@@ -55,7 +55,7 @@ export default {
     },
     check_command () {
       this.show_interactive_cursor = !this.user_input.length
-      this.active_prompt = true
+      this.active_prompt = this.user_input.length > 0
     },
     send_command () {
       const [command, ...args] = this.user_input.trim().split(' ')
@@ -74,7 +74,6 @@ export default {
     }
   },
   mounted: function () {
-    console.log(this.history)
     this.history[0].visible = true
   }
 }
