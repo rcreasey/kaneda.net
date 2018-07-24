@@ -25,8 +25,6 @@
         @keyup.enter="send_command"
       />
     </div>
-    <pre>{{ history }}</pre>
-
   </div>
 </template>
 
