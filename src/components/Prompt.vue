@@ -28,7 +28,6 @@ export default {
   },
   computed: {
     isInteractive: function () {
-      console.log(this.interactive)
       return this.interactive
     },
     typeDelay: function () { return this.delay * 2 }

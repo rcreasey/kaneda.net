@@ -30,6 +30,8 @@
 
 <script>
 import Prompt from './Prompt'
+import commands from '../lib/commands'
+
 export default {
   name: 'Console',
   components: {
@@ -67,7 +69,7 @@ export default {
       this.history.push({
         hostname: 'kaneda.net',
         command: command + ' ' + args,
-        result: 'command not found: ' + command,
+        result: commands.evaluate(command, args),
         interactive: true,
         visible: true
       })

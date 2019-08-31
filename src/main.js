@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import VueLodash from 'vue-lodash'
 import VueTyperPlugin from 'vue-typer'
 import vbclass from 'vue-body-class'
 
+Vue.use(VueLodash)
 Vue.use(VueTyperPlugin)
 Vue.use(vbclass, router)
 

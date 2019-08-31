@@ -6,6 +6,7 @@
 
 <script>
 import Console from './Console'
+import commands from '../lib/commands'
 
 export default {
   name: 'Localhost',
@@ -25,7 +26,7 @@ export default {
         {
           hostname: 'kaneda.net',
           command: 'ls -la',
-          result: 'drwxr-xr-x   - rcreasey 22 Jul  9:08 bin\n.rw-r--r-- 730 rcreasey 22 Jul  9:09 README.md',
+          result: commands.ls('/'),
           delay: 4,
           visible: false
         }
